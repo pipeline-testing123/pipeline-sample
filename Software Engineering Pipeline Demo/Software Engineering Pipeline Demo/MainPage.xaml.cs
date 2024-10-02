@@ -9,14 +9,22 @@
             InitializeComponent();
         }
 
+        public string PluralChecker(int count)
+        {
+
+            if (count == 1)
+                return $"Clicked {count} time";
+            else
+                return $"Clicked {count} times";
+
+        }
+
         private void OnCounterClicked(object sender, EventArgs e)
         {
             count++;
 
-            if (count == 1)
-                CounterBtn.Text = $"Clicked {count} time";
-            else
-                CounterBtn.Text = $"Clicked {count} times";
+            CounterBtn.Text = this.PluralChecker(count);
+
 
             SemanticScreenReader.Announce(CounterBtn.Text);
         }
