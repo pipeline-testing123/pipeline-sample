@@ -26,6 +26,8 @@ jobs:
       run: dotnet build ./Pipeline/Pipeline/Pipeline.csproj --no-restore --framework net8.0
   test:
     needs: build
+    
+    runs-on: ubuntu-latest
 
     steps:
     - name: Restore workloads
