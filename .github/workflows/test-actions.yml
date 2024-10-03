@@ -23,5 +23,8 @@ jobs:
     - name: Build
       run: dotnet build ./Pipeline/Pipeline/Pipeline.csproj --no-restore --framework net8.0
 
+    - name: Build
+      run: dotnet build ./Pipeline/Testing/Testing.csproj --no-restore --framework net8.0
+
     - name: Test
-      run: dotnet test ./Pipeline/Pipeline/Pipeline.csproj --no-build --verbosity normal
+      run: dotnet test ./Pipeline/Pipeline/Testing.csproj --no-build --verbosity normal
