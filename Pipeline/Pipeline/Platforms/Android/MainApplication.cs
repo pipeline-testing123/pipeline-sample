@@ -1,7 +1,7 @@
 ﻿using Android.App;
 using Android.Runtime;
 
-namespace Software_Engineering_Pipeline_Demo
+namespace Pipeline
 {
     [Application]
     public class MainApplication : MauiApplication

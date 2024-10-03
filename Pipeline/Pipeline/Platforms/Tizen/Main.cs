@@ -2,7 +2,7 @@ using Microsoft.Maui;
 using Microsoft.Maui.Hosting;
 using System;
 
-namespace Software_Engineering_Pipeline_Demo
+namespace Pipeline
 {
     internal class Program : MauiApplication
     {

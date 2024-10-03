@@ -1,4 +1,6 @@
-﻿namespace Software_Engineering_Pipeline_Demo
+using static Pipeline.TestService;
+
+namespace Pipeline
 {
     public partial class MainPage : ContentPage
     {

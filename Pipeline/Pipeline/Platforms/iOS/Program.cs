@@ -1,7 +1,7 @@
 ﻿using ObjCRuntime;
 using UIKit;
 
-namespace Software_Engineering_Pipeline_Demo
+namespace Pipeline
 {
     public class Program
     {

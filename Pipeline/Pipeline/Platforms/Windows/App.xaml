@@ -1,8 +1,8 @@
 ﻿<maui:MauiWinUIApplication
-    x:Class="Software_Engineering_Pipeline_Demo.WinUI.App"
+    x:Class="Pipeline.WinUI.App"
     xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
     xmlns:maui="using:Microsoft.Maui"
-    xmlns:local="using:Software_Engineering_Pipeline_Demo.WinUI">
+    xmlns:local="using:Pipeline.WinUI">
 
 </maui:MauiWinUIApplication>
