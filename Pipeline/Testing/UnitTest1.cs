@@ -1,17 +1,26 @@
+using Pipeline;
+
 namespace Testing
 {
     public class UnitTest1
     {
-        [Fact]
-        public void PassingTest()
-        {
-            Assert.Equal(4, 2 + 2);
-        }
+
+        TestService testService = new TestService();
 
         [Fact]
-        public void FailingTest()
+        public void PluralCheck_NotPlural()
         {
-            Assert.Equal(5, 2 + 2);
+            Assert.Equal("Clicked 1 time", testService.PluralChecker(1));
         }
+
+        [Theory]
+        [InlineData(2)]
+        [InlineData(3)]
+        [InlineData(4)]
+        public void PluralCheck_IsPlural(int count)
+        {
+            Assert.Equal($"Clicked {count} times", testService.PluralChecker(count));
+        }
+
     }
 }
