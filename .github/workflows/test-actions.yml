@@ -17,10 +17,11 @@ jobs:
         dotnet-version: 8.0
       
     - name: Restore dependencies
-      run: dotnet restore
+      run: dotnet restore ./Pipeline/Pipeline/Pipeline.csproj
       
     - name: Build
       run: dotnet build --no-restore
-      
+
+  test:
     - name: Test
       run: dotnet test --no-build --verbosity normal
