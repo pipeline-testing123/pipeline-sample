@@ -1,7 +1,10 @@
-﻿namespace Software_Engineering_Pipeline_Demo
+﻿using static Pipeline.TestService;
+
+namespace Pipeline
 {
     public partial class MainPage : ContentPage
     {
+        TestService testService = new TestService();
         int count = 0;
 
         public MainPage()
@@ -13,10 +16,8 @@
         {
             count++;
 
-            if (count == 1)
-                CounterBtn.Text = $"Clicked {count} time";
-            else
-                CounterBtn.Text = $"Clicked {count} times";
+            CounterBtn.Text = testService.PluralChecker(count);
+
 
             SemanticScreenReader.Announce(CounterBtn.Text);
         }
