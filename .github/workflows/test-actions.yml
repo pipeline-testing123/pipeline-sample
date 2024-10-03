@@ -15,9 +15,6 @@ jobs:
       uses: actions/setup-dotnet@v4
       with:
         dotnet-version: 8.0
-        
-    - name: Install MAUI
-      run: dotnet workload install maui --ignore-failed-sources
       
     - name: Restore dependencies
       run: dotnet restore
