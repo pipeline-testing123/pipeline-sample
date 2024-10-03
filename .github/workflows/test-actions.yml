@@ -21,7 +21,7 @@ jobs:
       run: dotnet restore ./Pipeline/Pipeline/Pipeline.csproj
       
     - name: Build
-      run: dotnet build ./Pipeline/Pipeline/Pipeline.csproj --no-restore 
+      run: dotnet build ./Pipeline/Pipeline/Pipeline.csproj --no-restore --framework net8.0
 
     - name: Test
       run: dotnet test ./Pipeline/Pipeline/Pipeline.csproj --no-build --verbosity normal
