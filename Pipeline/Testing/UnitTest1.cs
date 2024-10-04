@@ -16,7 +16,7 @@ namespace Testing
         [Theory]
         [InlineData(2)]
         [InlineData(3)]
-        [InlineData(1)]
+        [InlineData(4)]
         public void PluralCheck_IsPlural(int count)
         {
             Assert.Equal($"Clicked {count} times", testService.PluralChecker(count));
