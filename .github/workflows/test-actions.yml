@@ -37,14 +37,5 @@ jobs:
       with:
         dotnet-version: 8.0
 
-    - name: Restore workloads
-      run: dotnet workload restore ./Pipeline/Testing/Testing.csproj
-
-    - name: Restore dependencies
-      run: dotnet restore ./Pipeline/Testing/Testing.csproj
-
-    - name: Build
-      run: dotnet build ./Pipeline/Testing/Testing.csproj --no-restore --framework net8.0
-
     - name: Test
-      run: dotnet test ./Pipeline/Pipeline/Pipeline.csproj --framework net8.0
+      run: dotnet test --no-build --framework net8.0
