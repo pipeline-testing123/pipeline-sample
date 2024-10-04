@@ -1,4 +1,4 @@
-﻿namespace Software_Engineering_Pipeline_Demo
+﻿namespace Pipeline
 {
     public partial class AppShell : Shell
     {

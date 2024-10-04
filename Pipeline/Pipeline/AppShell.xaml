@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <Shell
-    x:Class="Software_Engineering_Pipeline_Demo.AppShell"
+    x:Class="Pipeline.AppShell"
     xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-    xmlns:local="clr-namespace:Software_Engineering_Pipeline_Demo"
+    xmlns:local="clr-namespace:Pipeline"
     Shell.FlyoutBehavior="Disabled"
-    Title="Software_Engineering_Pipeline_Demo">
+    Title="Pipeline">
 
     <ShellContent
         Title="Home"
