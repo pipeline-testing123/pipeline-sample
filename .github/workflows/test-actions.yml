@@ -38,4 +38,4 @@ jobs:
         dotnet-version: 8.0
 
     - name: Test
-      run: dotnet test ./Pipeline.sln --no-build --framework net8.0
+      run: dotnet test ./Pipeline/Pipeline.sln --no-build --framework net8.0
