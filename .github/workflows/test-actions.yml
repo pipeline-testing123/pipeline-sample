@@ -58,6 +58,7 @@ jobs:
       run: |
         mkdir -p ./.sonar/scanner
         cd ./Pipeline
+        ls
         dotnet tool update dotnet-sonarscanner --tool-path ../.sonar/scanner
 
     - name: Build and analyze
