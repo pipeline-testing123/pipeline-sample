@@ -54,8 +54,8 @@ jobs:
       env:
         SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
       run: |
-        ./.sonar/scanner/dotnet-sonarscanner begin /k:"set09102-test-07102024_pipeline" /o:"set09102-test-07102024" /d:sonar.token="${{ secrets.SONAR_TOKEN }}" /d:sonar.host.url="https://sonarcloud.io"
-        dotnet build ./Pipeline/Pipeline/Pipeline.csproj --no-restore --framework net8.0
+        ./.sonar/scanner/dotnet-sonarscanner begin /k:"set09102-test-07102024_pipeline" /o:"set09102-test-07102024" /d:sonar.token="${{ secrets.SONAR_TOKEN }}" /d:sonar.host.url="https://sonarcloud.io /d:sonar.scanner.scanAll=false"
+        dotnet build ./Pipeline/Pipeline.sln --no-restore --framework net8.0
         ./.sonar/scanner/dotnet-sonarscanner end /d:sonar.token="${{ secrets.SONAR_TOKEN }}"
 
     - name: Test
