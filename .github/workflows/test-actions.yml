@@ -49,12 +49,12 @@ jobs:
         mkdir -p ./.sonar/scanner
         cd ./Pipeline
         dotnet tool update dotnet-sonarscanner --tool-path ../.sonar/scanner
-        dotnet tool install --global dotnet-coverage
 
     - name: Build and analyze
       env:
         SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
       run: |
+        dotnet tool install --global dotnet-coverage
         ./.sonar/scanner/dotnet-sonarscanner begin /k:"set09102-test-07102024_pipeline" /o:"set09102-test-07102024" /d:sonar.token="${{ secrets.SONAR_TOKEN }}" /d:sonar.host.url="https://sonarcloud.io" /d:sonar.scanner.scanAll=false /d:sonar.cs.vscoveragexml.reportsPaths=coverage.xml
         dotnet build ./Pipeline/Pipeline/Pipeline.csproj --no-restore --framework net8.0
         dotnet-coverage collect "dotnet test ./Pipeline/Pipeline.sln --framework net8.0" -f xml -o "coverage.xml"
