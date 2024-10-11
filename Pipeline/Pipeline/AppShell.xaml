@@ -8,7 +8,7 @@
     Title="Pipeline">
 
     <ShellContent
-        Title="Home"
+        Title="Books"
         ContentTemplate="{DataTemplate local:MainPage}"
         Route="MainPage" />
 
