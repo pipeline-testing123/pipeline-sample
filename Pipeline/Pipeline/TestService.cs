@@ -1,4 +1,6 @@
-﻿namespace Pipeline
+﻿using Pipeline.Models;
+
+namespace Pipeline
 {
     public class TestService
     {
@@ -11,5 +13,14 @@
                 return $"Clicked {count} times";
 
         }
+
+        public List<Book> GetBooks()
+        {
+            using (var context = new BookDb())
+            {
+                return context.Petitions.ToList();
+            }
+        }
+            
     }
 }
