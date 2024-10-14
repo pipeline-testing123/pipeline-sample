@@ -2,29 +2,35 @@
 using System.ComponentModel.DataAnnotations.Schema;
 using System.ComponentModel.DataAnnotations;
 
-namespace Pipeline.Models
+namespace Pipeline
 {
+    /**Represents a book*/
     public class Book
     {
 
+        /**Primary key for the book object*/
         [Key]
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public int Id { get; set; }
 
+        /**Name of the book*/
         [Required]
         public string Name { get; set; }
 
+        /**Author of the book*/
         [Required]
         public string Author { get; set; }
 
+        /**Blurb of the book*/
         public string Blurb { get; set; }
     }
 
+    /**Database context for book database*/
     class BookDb : DbContext
     {
         static readonly string connectionString = "Server=localhost; User ID=root; Password=admin; Database=book";
 
-        public DbSet<Book> Petitions { get; set; } = null!;
+        public DbSet<Book> Books { get; set; } = null!;
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
