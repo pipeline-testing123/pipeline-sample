@@ -1,9 +1,14 @@
-﻿using Pipeline.Models;
-
-namespace Pipeline
+﻿namespace Pipeline
 {
     public class TestService
     {
+        /**Checks if an integer is greater than 0,
+         * If int > 1 then returns a string ending in 's'
+         * Else returns a string without 's'
+         * 
+         * @param count integer to check
+         */
+        
         public string PluralChecker(int count)
         {
 
@@ -14,11 +19,12 @@ namespace Pipeline
 
         }
 
+        // Returns a list of all books from bookdb
         public List<Book> GetBooks()
         {
             using (var context = new BookDb())
             {
-                return context.Petitions.ToList();
+                return context.Books.ToList();
             }
         }
             
