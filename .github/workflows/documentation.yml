@@ -21,6 +21,12 @@ jobs:
     - name: Generate Doxygen Documentation
       run: doxygen Pipeline/Doxyfile
     
+    - name: check dir
+      run: |
+       ls
+       cd Pipeline
+       ls
+
       
     - name: Upload static files as artifact
       uses: actions/upload-pages-artifact@v3 
