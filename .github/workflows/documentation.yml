@@ -20,13 +20,23 @@ jobs:
 
     - name: Generate Doxygen Documentation
       run: doxygen Pipeline/Doxyfile
+    
+      
+    - name: Upload static files as artifact
+      uses: actions/upload-pages-artifact@v3 
+      with:
+        path: Pipeline/html
 
   deploy:
     needs: generate
     runs-on: ubuntu-latest
 
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+
     steps:
-      - name: Upload static files as artifact
-        uses: actions/upload-pages-artifact@v3 
-        with:
-          path: Pipeline/html
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
+
