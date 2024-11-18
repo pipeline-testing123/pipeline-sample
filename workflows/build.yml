@@ -13,3 +13,12 @@ jobs:
       uses: actions/setup-dotnet@v4
       with:
         dotnet-version: 8.0
+
+    - name: Restore workloads
+      run: dotnet workload restore ./Pipeline/Pipeline/Pipeline.csproj
+
+    - name: Restore dependencies
+      run: dotnet restore ./Pipeline/Pipeline/Pipeline.csproj
+
+    - name: Build project
+      run: dotnet build ./Pipeline/Pipeline/Pipeline.csproj --framework net8.0
