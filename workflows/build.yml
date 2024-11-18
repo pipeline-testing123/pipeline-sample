@@ -23,3 +23,9 @@ jobs:
 
     - name: Build project
       run: dotnet build ./Pipeline/Pipeline/Pipeline.csproj --framework net8.0
+
+    - name: Build
+      run: dotnet build ${{ vars.CSPROJ_PATH }} --framework net8.0
+
+    - name: test
+      run: dotnet test ./Pipeline/Pipeline.sln --framework net8.0
